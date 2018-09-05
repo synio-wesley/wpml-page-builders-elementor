@@ -18,7 +18,7 @@ class WPML_Elementor_Media_Nodes_Iterator implements IWPML_PB_Media_Nodes_Iterat
 	 */
 	public function translate( $data_array, $lang, $source_lang ) {
 		foreach ( $data_array as &$node ) {
-			if ( $node['elements'] ) {
+			if ( isset( $node['elements'] ) && $node['elements'] ) {
 				$node['elements'] = $this->translate( $node['elements'], $lang, $source_lang );
 			} elseif ( isset( $node['elType'], $node['widgetType'], $node['settings'] )
 			           && 'widget' === $node['elType']
