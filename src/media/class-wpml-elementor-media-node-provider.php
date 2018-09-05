@@ -44,6 +44,14 @@ class WPML_Elementor_Media_Node_Provider {
 					$node = new WPML_Elementor_Media_Node_Image_Carousel( $this->get_media_translate() );
 					break;
 
+				case 'wp-widget-media_image':
+					$node = new WPML_Elementor_Media_Node_WP_Widget_Media_Image( $this->get_media_translate() );
+					break;
+
+				case 'wp-widget-media_gallery':
+					$node = new WPML_Elementor_Media_Node_WP_Widget_Media_Gallery( $this->get_media_translate() );
+					break;
+
 				default:
 					$node = null;
 			}
