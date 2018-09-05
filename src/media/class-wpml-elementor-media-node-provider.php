@@ -28,6 +28,22 @@ class WPML_Elementor_Media_Node_Provider {
 					$node = new WPML_Elementor_Media_Node_Call_To_Action( $this->get_media_translate() );
 					break;
 
+				case 'media-carousel':
+					$node = new WPML_Elementor_Media_Node_Media_Carousel( $this->get_media_translate() );
+					break;
+
+				case 'image-box':
+					$node = new WPML_Elementor_Media_Node_Image_Box( $this->get_media_translate() );
+					break;
+
+				case 'image-gallery':
+					$node = new WPML_Elementor_Media_Node_Image_Gallery( $this->get_media_translate() );
+					break;
+
+				case 'image-carousel':
+					$node = new WPML_Elementor_Media_Node_Image_Carousel( $this->get_media_translate() );
+					break;
+
 				default:
 					$node = null;
 			}
