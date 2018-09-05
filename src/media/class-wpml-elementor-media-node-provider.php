@@ -24,6 +24,10 @@ class WPML_Elementor_Media_Node_Provider {
 					$node = new WPML_Elementor_Media_Node_Slides( $this->get_media_translate() );
 					break;
 
+				case 'call-to-action':
+					$node = new WPML_Elementor_Media_Node_Call_To_Action( $this->get_media_translate() );
+					break;
+
 				default:
 					$node = null;
 			}
